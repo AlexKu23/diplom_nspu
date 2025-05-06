@@ -1,0 +1,56 @@
+1  sudo apt-get update
+    2  clear
+    3  sudo apt-get emacs
+    4  sudo apt install emacs
+    5  python3 -v
+    6  clear
+    7  python3
+    8  sudo apt update
+    9  pat list --upgradable
+   10  apt list --upgradable
+   11  sudo apt install git
+   12  git --V
+   13  git --version
+   14  sudo add-apt-repository ppa:jonmagon/crow-translate
+   15  sudo apt update
+   16  sudo apt install crow-translate
+   17  git config --global user.name "Bruce Bek"
+   18  git config --global user.email bruce.bek@hotmail.com
+   19  ls
+   20  git clone https://gitlab.com/brucebek/bek_bruce_python2021.git
+   21  git remote
+   22  git remote -v
+   23  cd bek_bruce_python2021
+   24  git remote
+   25  git checkout -b bek_hw_01
+   26  echo "Хочу 20 баллов за это задание" > file_1.txt 
+   27  echo "Хочу 0 баллов за это задание" > file_1.txt 
+   28  git status
+   29  echo "Хочу 20 баллов за это задание" > file_1.txt 
+   30  echo "Хочу 0 баллов за это задание" > file_2.txt 
+   31  git status
+   32  mkdir hw-01
+   33  mv file_1.txt file_2.txt hw-01/
+   34  ls
+   35  cd hw-01
+   36  cls
+   37  git status
+   38  ls
+   39  history
+   40  echo "file_2.txt" > .gitignore
+   41  ls
+   42  echo "file_2.txt" > .gitignore
+   43  touch .gitignore
+   44  git status
+   45  echo "file_2.txt" > .gitignore
+   46  ls
+   47  ls -a
+   48  git add .
+   49* git statu
+   50  git commit -m "[HW-01]-added files, I want points"
+   51  git status
+   52  git push
+   53  git push origin bek_hw_01
+   54  emacs file_1.txt
+   55  history
+brucebek@brucebХочу 20 баллов за это задание

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <title>.py</title>
+        <link rel="stylesheet" href="{% static 'lib/codemirror.css' %}">
+
+    </head>
+    <body>
+    {% block main %}{% endblock %}
+    {% block menu %}
+    <div class="nav">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <div class="menu">
+                <li><a href="{% url 'index' %}">курсы</a></li>
+                <li><a href="{% url 'editor' %}">редактор кода</a></li>
+            </div>
+        </div>
+    {% endblock %}
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'skulpt.min.js' %}"></script>
+    <script src="{% static 'skulpt-stdlib.js' %}"></script>
+
+    <script src="{% static 'lib/codemirror.js' %}"></script>
+    <script src="{% static 'python/python.js' %}"></script>
+
+    <script src="{% static 'index.js' %}"></script>
+    </body>
+</html>

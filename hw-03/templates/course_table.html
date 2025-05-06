@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+{% if title %}{{ title }}{% endif %}
+{% endblock %}
+{% block table %}
+<table id="acrylic">
+    <thead>
+    <tr>
+        {% for col in columns %}
+        <th>{{ col }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+
+            {% for val in row %}
+            <td>
+                {% if loop.index == 4  and  val %}
+                <a href="{{ val }}">Ссылка на MR</a>
+                {% elif loop.index == 4 and not val %}
+                    Не сдано
+                {% else %}
+                    {{ val }}
+                {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

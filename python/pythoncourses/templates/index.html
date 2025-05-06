@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main %}
+        <div class="courses">
+            {% for course in courses %}
+            <a href="{% url 'course' course=course.slug %}">
+                <p class="name_course">{{ course }}</p>
+                <p class="description_course">{{ course.description|truncatewords:12 }}</p>
+            </a>
+            {% endfor %}
+        </div>
+{% endblock %}

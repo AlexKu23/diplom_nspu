@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block main %}
+    <h1>{{ course.name }}</h1>
+    <h2>{{ course.description }}</h2>
+    <div class="themes">
+            {% for theme in themes %}
+            <a href="{% url 'theme' course=course.slug theme=theme.slug %}">
+                <p class="name_theme">{{ theme }}</p>
+                <p class="description_theme">{{ theme.description }}</p>
+            </a>
+            {% endfor %}
+    </div>
+{% endblock %}

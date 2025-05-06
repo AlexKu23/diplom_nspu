@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block main %}
+    <h1>{{ theme.name }}</h1>
+    <div class="lessons">
+            {% for lns_tks in lessons %}
+                <div class='lesson'>
+                    <h2 class="lesson-h2">{{ lns_tks.lesson }}</h2>
+                    {{ lns_tks.lesson.content|safe }}
+
+                    {% for task in lns_tks.tasks %}
+                        <div class="task" id="{{ task.pk }}">
+                            <h2 class="lesson-h2">Задача: {{ task }}</h2>
+                            {{ task.formulation|safe }}
+                        </div>
+                    {% endfor %}
+
+                </div>
+            {% endfor %}
+    </div>
+{% endblock %}
+{% block menu %}
+    <div class="nav">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <div class="menu">
+                <li><a href="{% url 'index' %}">курсы</a></li>
+                <li><a href="{% url 'editor' %}">редактор</a></li>
+                <li><a href="{% url 'course' course=course.slug %}">темы</a></li>
+            </div>
+        </div>
+{% endblock %}

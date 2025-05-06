@@ -1,0 +1,314 @@
+@import "normalize.css";
+@import "fonts/fonts.css";
+body {
+    margin: 6.25% 12.5%;
+    font-family: 'SF UI Display', serif;
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+}
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-auto-rows: minmax(200px, 270px);
+    grid-gap: 20px;
+}
+.courses > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.5s;
+}
+.courses > a:hover{
+    transform: translateY(-5px);
+}
+.courses > :nth-child(4n + 1){
+    background-image: linear-gradient(135deg, #00f260 0%, #d7aaff 55%, #ffa2f8 67%, #ff6fcf 100%);
+}
+.courses > :nth-child(4n + 1):hover{
+    box-shadow: 0 6px 10px #00f260 ;
+
+}
+.courses > :nth-child(4n + 2){
+    background-image: linear-gradient(135deg, #db36a4 0%, #f7ff00 100%);
+}
+
+.courses > :nth-child(4n + 2):hover{
+    box-shadow: 0 6px 10px #db36a4 ;
+
+}
+.courses > :nth-child(4n + 3){
+    background-image: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+}
+.courses > :nth-child(4n + 3):hover{
+    box-shadow: 0 6px 10px #f5af19 ;
+
+}
+.courses > :nth-child(4n + 4){
+    background-image: linear-gradient(135deg, #dd1818 0%, #333333 100%);
+}
+
+.courses > :nth-child(4n + 4):hover{
+    box-shadow: 0 6px 10px #dd1818;
+
+}
+.name_course {
+    font-size: 30px;
+
+    font-weight: bold;
+    font-style: normal;
+}
+.description_course {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+.nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+
+    right: 12.5%;
+    bottom: 20px;
+    position: fixed;
+    background-color: #fff;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 450px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0px 40px;
+}
+
+.menu li a {
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #161919;
+}
+
+.nav input {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: #f974a1;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+.themes {
+    margin-top: 40px;
+    display: grid;
+    grid-gap: 20px;
+
+}
+.name_theme{
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+}
+.description_theme{
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+.themes > a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.5s;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.themes > a:hover {;
+    box-shadow: 0 8px 15px #E0C3FC;
+    transform: translateX(-10px);
+}
+.lesson {
+    font-size: 28px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 38px;
+}
+.lesson-hidden {
+    display: none;
+}
+@media (max-width: 600px) {
+    .courses {
+        grid-template-columns: 345px;
+    }
+}
+.CodeMirror  {
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.outp {
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    border-style: none;
+    border-radius: 20px;
+    width: 78.75%;
+    resize: none;
+    display: none;
+    height: 160px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.lesson-h2 {
+    font-weight: 600;
+    font-style: normal;
+}
+.lesson > p, .tasks > p {
+    text-indent: 30px;
+}
+.task > p {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 24px;
+}
+.task {
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    display: grid;
+    margin-bottom: 30px;
+}
+.task > div {
+    margin-top: 30px;
+}
+.btn-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 40px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    float: right;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-10 {
+    clear:right;
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+.btn-hover.color-7 {
+
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    font-size: 1.5rem;
+}
+svg {
+    cursor: pointer;
+}
+.output {
+    min-height: 150%;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    border-style: none;
+    border-radius: 20px;
+    resize: none;
+}
+#Logo {
+    margin: 0 47.5%;
+    margin-bottom: 2%;
+}

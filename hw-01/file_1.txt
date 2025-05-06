@@ -1,0 +1,14 @@
+Хочу 20 баллов за это задание
+   1  git clone https://gitlab.com/brucebek/bek_bruce_python2021.git
+   2  cd bek_bruce_python2021
+   3  git checkout -b bek_hw_01
+   4  echo "Хочу 20 баллов за это задание" > file_1.txt 
+   5  echo "Хочу 0 баллов за это задание" > file_2.txt 
+   6  mkdir hw-01
+   7  mv file_1.txt file_2.txt hw-01/
+   8  cd hw-01
+   9  echo "file_2.txt" > .gitignore
+   10  git add .
+   11  git commit -m "[HW-01]-added files, I want points"
+   12  git push origin bek_hw_01
+   13  emacs file_1.txt
